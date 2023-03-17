@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TemperatureVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="TemperatureVC" customModule="celsiusToFahrenheit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="icW-W1-v6A">
+                                <rect key="frame" x="77.5" y="280" width="220" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="Gf5-88-TZK"/>
+                                    <constraint firstAttribute="height" constant="45" id="g7E-ng-Us6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTL-gL-QUy">
+                                <rect key="frame" x="67.5" y="345" width="240" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="d6B-da-FA8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tappedconvertButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JUb-ve-wDj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xhc-2H-x3W">
+                                <rect key="frame" x="57.5" y="400" width="260" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="IR3-Lq-meT"/>
+                                    <constraint firstAttribute="width" constant="260" id="VjJ-nN-57n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempScale" translatesAutoresizingMaskIntoConstraints="NO" id="QL5-Hn-Acz">
+                                <rect key="frame" x="97.5" y="60" width="180" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="5ti-RY-EiO"/>
+                                    <constraint firstAttribute="width" constant="180" id="icI-Ia-h40"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.85490196939999996" green="0.38431376220000002" blue="0.18823529780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="cTL-gL-QUy" firstAttribute="top" secondItem="icW-W1-v6A" secondAttribute="bottom" constant="20" id="2qY-kl-RLr"/>
+                            <constraint firstItem="icW-W1-v6A" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="280" id="4dy-20-Gyk"/>
+                            <constraint firstItem="Xhc-2H-x3W" firstAttribute="top" secondItem="cTL-gL-QUy" secondAttribute="bottom" constant="20" id="8DA-GT-Eh6"/>
+                            <constraint firstItem="QL5-Hn-Acz" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ZQD-hP-iTh"/>
+                            <constraint firstItem="Xhc-2H-x3W" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ik3-v2-pea"/>
+                            <constraint firstItem="QL5-Hn-Acz" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="mEx-Z8-IvF"/>
+                            <constraint firstItem="icW-W1-v6A" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="omy-CZ-h4C"/>
+                            <constraint firstItem="cTL-gL-QUy" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="u1t-mn-pjW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="celciusLabel" destination="Xhc-2H-x3W" id="dyF-WO-tfL"/>
+                        <outlet property="convertButton" destination="cTL-gL-QUy" id="Dd4-Hu-djC"/>
+                        <outlet property="fahrenheitTextField" destination="icW-W1-v6A" id="b7y-8r-aTx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="-2.2488755622188905"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tempScale" width="626" height="399"/>
+    </resources>
+</document>
